@@ -25,7 +25,7 @@ class uwsgi::params {
         redhat: {
             $app_directory = '/etc/uwsgi.d'
             $python_dev    = 'python-devel'
-            if versioncmp($::operatingsystemrelease, 7) > 0 {
+            if versioncmp($::operatingsystemrelease, "7") > 0 {
               $service_provider  = 'systemd'
               $service_file      = '/etc/systemd/system/uwsgi.service'
               $service_file_mode = '0664'
